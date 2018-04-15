@@ -1,5 +1,4 @@
-# Card  Acu
-[![Coverage Status](https://coveralls.io/repos/github/react-webpack-generators/generator-react-webpack/badge.svg?branch=master)](https://coveralls.io/github/react-webpack-generators/generator-react-webpack?branch=master) [![Join the chat at https://gitter.im/newtriks/generator-react-webpack](https://badges.gitter.im/newtriks/generator-react-webpack.svg)](https://gitter.im/newtriks/generator-react-webpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://secure.travis-ci.org/react-webpack-generators/generator-react-webpack.png?branch=master)](https://travis-ci.org/react-webpack-generators/generator-react-webpack) ![Amount of Downloads per month](https://img.shields.io/npm/dm/generator-react-webpack.svg "Amount of Downloads") ![Dependency Tracker](https://img.shields.io/david/react-webpack-generators/generator-react-webpack.svg "Dependency Tracker") ![Dependency Tracker](https://img.shields.io/david/dev/react-webpack-generators/generator-react-webpack.svg "Dependency Tracker") ![Node Version](https://img.shields.io/node/v/generator-react-webpack.svg "Node Version")
+# card acqusition
 
 > Yeoman generator for [ReactJS](http://facebook.github.io/react/) - lets you quickly set up a project including karma test runner and [Webpack](http://webpack.github.io/) module system.
 
@@ -14,7 +13,7 @@ Out of the box it comes with support for:
 - Automatic code linting via esLint
 - Ability to unit test components via Karma and Mocha/Chai
 
-## Changes since version 2.0
+## Changes since version 1.0
 This generator is written in ES2015. This means it is ___not compatible with node.js versions before 4.0___.
 
 It also does __NOT__ include support for Flux-Frameworks anymore. Instead, we will use it as a base for other generators to build upon. This will make the base generator easier to use and update.
@@ -32,6 +31,7 @@ If you have built a generator using generator-react-webpack, tell us and we will
 ## Installation
 ```bash
 # Make sure both is installed globally
+node 6.8
 npm install -g yo
 npm install -g generator-react-webpack
 ```
