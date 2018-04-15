@@ -1,8 +1,28 @@
 # card acqusition
+A sample POC on card acqusition
+
+#prerequisite
+## Installation
+```bash
+# Make sure you have node => 6.8
+npm install -g yo
+npm install -g generator-react-webpack
+```
+
+## Setting up projects
+```bash
+# Create a new directory, and `cd` into it:
+mkdir my-new-project && cd my-new-project
+
+# Run the generator
+yo react-webpack
+```
+
+Please make sure to edit your newly generated `package.json` file to set description, author information and the like.
+
 
 > Yeoman generator for [ReactJS](http://facebook.github.io/react/) - lets you quickly set up a project including karma test runner and [Webpack](http://webpack.github.io/) module system.
 
-# About
 Generator-React-Webpack will help you build new React projects using modern technologies.
 
 Out of the box it comes with support for:
@@ -28,24 +48,6 @@ If you have built a generator using generator-react-webpack, tell us and we will
 
 ---
 
-## Installation
-```bash
-# Make sure both is installed globally
-node 6.8
-npm install -g yo
-npm install -g generator-react-webpack
-```
-
-## Setting up projects
-```bash
-# Create a new directory, and `cd` into it:
-mkdir my-new-project && cd my-new-project
-
-# Run the generator
-yo react-webpack
-```
-
-Please make sure to edit your newly generated `package.json` file to set description, author information and the like.
 
 ## Generating new components
 ```bash
