@@ -4,6 +4,7 @@ let Navbar = require('react-bootstrap/lib/Navbar');
 let NavItem = require('react-bootstrap/lib/NavItem');
 let Nav = require ('react-bootstrap/lib/Nav');
 import {Button ,FormGroup,FormControl} from 'react-bootstrap';
+let yeomanImage = require('../images/usbank_logo.png');
 
 class NavigationBar extends React.Component {
   render() {
@@ -11,7 +12,9 @@ class NavigationBar extends React.Component {
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">Company-LOGO</a>
+              <a href="#">
+                <img width={120} height={30} alt="US BANK" src={yeomanImage}/>
+              </a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
