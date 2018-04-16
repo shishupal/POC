@@ -1,11 +1,10 @@
 /* Base Application Styles */
 body {
-  color: #fff;
-  background: #222;
+  color: #CCC;
+  background: #FFf;
 }
 
 .index img {
-  margin: 40px auto;
   border-radius: 4px;
   background: #fff;
   display: block;
@@ -18,5 +17,29 @@ body {
   border: 1px solid #000;
   border-width: 1px 0;
   background: #666;
+}
+#app .navbar-inverse {
+  background-color: #154075;
+  color: #FFFFff;
+  background-image: linear-gradient(to right top,  rgb(21,64,117),  rgb(21,64,117),  rgb(21,64,117),  rgb(21,64,117),  rgb(21,64,117)) !important;
+  text-decoration: none;
+
+background: #154075; /* Old browsers */
+  background: -moz-linear-gradient(top, #154075 0%, #154075 100%) !important; /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #154075 0%,#154075 100%)!important; /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #154075 0%,#154075 100%)!important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-image: -webkit-linear-gradient(top,#154075 0,#154075 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#154075', endColorstr='#154075',GradientType=0 )!important; /* IE6-9 */
+}
+#app nav img{
+margin-right:0;
+}
+
+#app .navbar-collapse a ,#app.collapse a{
+color:  #fff;
+}
+
+#app .navbar-collapse a:hover ,#app.collapse a:hover{
+  font-size: 24px;
 }
 

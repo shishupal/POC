@@ -20,11 +20,12 @@ class NavigationBar extends React.Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav >
-              <NavItem eventKey={1} href="#">Home</NavItem>
-              <NavItem eventKey={2} href="#">About</NavItem>
+              <NavItem eventKey={1} href="#">Banking</NavItem>
+              <NavItem eventKey={2} href="#">Personal</NavItem>
               <NavItem eventKey={3} href="#">Products</NavItem>
               <NavItem eventKey={4} href="#">Services</NavItem>
             </Nav>
+
             <Navbar.Form pullRight>
               <FormGroup>
                 <FormControl type="text" placeholder="Search" />

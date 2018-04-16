@@ -1,0 +1,26 @@
+{
+  "cardList": [{
+    "id": 1,
+    "cardDetails":[{
+      "cardHeader": "Green Card Unlimited",
+      "cardRating": 4,
+      "cardmemberView": 100000
+    }],
+    "Offer": [{
+      "header": "Chase Freedom Unlimited",
+      "description": [{
+        "cashack": 250,
+        "detailsTranstaction": "Earn 5% cash back on up to $1,500 in combined purchases in bonus categories each quarter you activate and unlimited 1% cash back on all other purchases"
+      }]
+
+    }],
+    "glance": [{
+      "cashack": 250,
+      "detailsTranstaction": "Earn 5% cash back on up to $1,500 in combined purchases in bonus categories each quarter you activate and unlimited 1% cash back on all other purchases."
+    }],
+    "apr": [{
+      "cashack": 250,
+      "detailsTranstaction": "Earn 5% cash back on up to $1,500 in combined purchases in bonus categories each quarter you activate and unlimited 1% cash back on all other purchases."
+    }]
+  }]
+}
