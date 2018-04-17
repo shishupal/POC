@@ -1,8 +1,7 @@
 
 import React from 'react';
-
 import {Modal,Button} from 'react-bootstrap';
-
+import CardForm from './Form';
 class MyLargeModal extends React.Component {
   constructor(props){
     super(props)
@@ -15,10 +14,11 @@ class MyLargeModal extends React.Component {
         aria-labelledby="contained-modal-title-lg"
       >
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-lg">Please Enter Your Details.</Modal.Title>
+          <Modal.Title id="contained-modal-title-lg">Please enter Your Details.</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Form started</h4>
+          <h4> formsss</h4>
+          <CardForm />
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.onHide}>Close</Button>
