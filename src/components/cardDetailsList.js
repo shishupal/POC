@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import StarRatingComponent from 'react-star-rating-component';
+import Apply from './apply';
 const CardListItem = ({card, img}) => {
   return (
     <div className="row cardlist">
@@ -42,6 +43,10 @@ const CardListItem = ({card, img}) => {
         <h4  className='col-md-12 header'>{card.apr[0]} </h4>
         <div  className='col-md-12'>
         <span  className='bold'>{card.apr[1]}</span>
+        </div>
+
+        <div  className='col-md-12'>
+        <Apply />
         </div>
         </div>
       </div>
