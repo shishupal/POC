@@ -18,8 +18,11 @@ class CardContainer extends React.Component {
         'cardRating': 4,
         'cardmemberView': 100000,
         'cashack': 250,
-        'detailsTranstaction': "Earn 5% cash back on up to $1,500 in combined purchases in bonus categories each quarter you activate and unlimited 1% cash back on all other purchases."
-      }]
+        'detailsTranstaction': "Earn 5% cash back on up to $1,500 in combined purchases in bonus categories each quarter you activate and unlimited 1% cash back on all other purchases.",
+        'offer':['NEW CARDMEMBER OFFER','$150 bonus ','after you spend $500 on purchases in the first 3 months from account opening.'],
+        'glance':['AT A View','Earn unlimited cash back ', "Earn unlimited 1.5% cash back on every purchase – it's automatic. No minimum to redeem for cash back."],
+        'apr':['ANNUAL FEE' ,'$0']
+        }]
       }]}
   }
 

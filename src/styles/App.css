@@ -21,6 +21,7 @@ ul {
   border: 1px solid #000;
   border-width: 1px 0;
   background: #666;
+
 }
 #app .navbar-inverse {
   background-color: #154075;
@@ -46,4 +47,3 @@ color:  #fff;
 #app .navbar-collapse a:hover ,#app.collapse a:hover{
   font-size: 24px;
 }
-

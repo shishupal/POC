@@ -1,3 +1,17 @@
-.cardContainer{
+.cardContainer strong{
   background-color:#fff;
+}
+
+.cardContainer .list-group{
+  border-bottom: 1px solid  #CCC !important;
+}
+ .cardContainer .bold{
+  font-size:20px;
+}
+.cardlist .header{
+  margin-bottom: 5px;
+  color: #686868;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
 }
