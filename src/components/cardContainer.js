@@ -17,10 +17,10 @@ class CardContainer extends React.Component {
         'cardHeader': 'My Card Unlimited',
         'cardRating': 4,
         'cardmemberView': 100000,
-        "cashack": 250,
-        "detailsTranstaction": "Earn 5% cash back on up to $1,500 in combined purchases in bonus categories each quarter you activate and unlimited 1% cash back on all other purchases."
+        'cashack': 250,
+        'detailsTranstaction': "Earn 5% cash back on up to $1,500 in combined purchases in bonus categories each quarter you activate and unlimited 1% cash back on all other purchases."
       }]
-    }]}
+      }]}
   }
 
   handleSelect(selectedIndex) {
@@ -28,11 +28,10 @@ class CardContainer extends React.Component {
       index: selectedIndex,
       direction: 'next'
     });
-
   }
 
   render() {
-    return (
+  return (
       <div className="cardContainer container">
         <div className="row">
             <CardList List={this.state.cardList[0].cardDetails} eliteCardImage={patinum} />

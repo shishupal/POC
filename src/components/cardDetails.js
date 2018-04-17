@@ -6,18 +6,18 @@ import CardListItem from './cardDetailsList';
 
 const CardList = (props) =>{
   let count=0;
+  let image=props.eliteCardImage;
   const cardListItem = props.List.map((list)=>{
     return(
       <CardListItem
         card={list}
         key={count}
+        img={image}
       />);
   });
   return(
-    <ul className="col-md-4 list-group">
+    <ul className="row list-group">
       {cardListItem}
-      <li ><img src={props.eliteCardImage} alt="eliteCardImage"/></li>
-
     </ul>
   );
 } ;

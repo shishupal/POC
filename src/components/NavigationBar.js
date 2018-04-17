@@ -30,7 +30,7 @@ class NavigationBar extends React.Component {
               <FormGroup>
                 <FormControl type="text" placeholder="Search" />
               </FormGroup>{' '}
-              <Button type="submit">Submit</Button>
+              <Button type="submit" className="btn-primary">Sign In</Button>
             </Navbar.Form>
           </Navbar.Collapse>
         </Navbar>

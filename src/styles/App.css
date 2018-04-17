@@ -1,6 +1,6 @@
 /* Base Application Styles */
 body {
-  color: #CCC;
+  color: #333;
   background: #FFf;
 }
 
@@ -9,7 +9,11 @@ body {
   background: #fff;
   display: block;
 }
-
+ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
 .index .notice {
   margin: 20px auto;
   padding: 15px 0;
