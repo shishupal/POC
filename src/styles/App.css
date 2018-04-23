@@ -47,3 +47,7 @@ color:  #fff;
 #app .navbar-collapse a:hover ,#app.collapse a:hover{
   font-size: 24px;
 }
+
+ #app .modal-body{
+   margin-left: 12%;
+ }

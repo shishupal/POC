@@ -1,4 +1,4 @@
-import {HelpBlock,FormGroup, FormControl,ControlLabel ,Form} from 'react-bootstrap';
+import {HelpBlock,FormGroup, FormControl,ControlLabel ,Form,Col,Button,InputGroup} from 'react-bootstrap';
 import React from 'react';
 
 class CardForm extends React.Component {
@@ -26,22 +26,57 @@ class CardForm extends React.Component {
 
   render() {
     return (
-      <form>
-        <FormGroup
-          controlId="formBasicText"
-          validationState={this.getValidationState()}
-        >
-          <ControlLabel>Working example with validation</ControlLabel>
-          <FormControl
-            type="text"
-            value={this.state.value}
-            placeholder="Enter text"
-            onChange={this.handleChange}
-          />
-          <FormControl.Feedback />
-          <HelpBlock>Validation is based on string length.</HelpBlock>
+      <Form horizontal>
+      <FormGroup controlId="formHorizontalFirstName">
+        <Col componentClass={ControlLabel} sm={2}>
+        First Name
+        </Col>
+        <Col sm={6}>
+          <FormControl type="text" placeholder=" First Name" />
+        </Col>
+      </FormGroup>
+      <FormGroup controlId="formHorizontalLastName">
+        <Col componentClass={ControlLabel} sm={2}>
+          Last Name
+        </Col>
+        <Col sm={6}>
+          <FormControl type="text" placeholder="Last Name" />
+        </Col>
+      </FormGroup>
+      <FormGroup controlId="formHorizontalLastName">
+        <Col componentClass={ControlLabel} sm={2}>
+          SSN
+        </Col>
+        <Col sm={6}>
+          <FormControl type="text" placeholder="Social security Number" />
+        </Col>
+      </FormGroup>
+        <FormGroup controlId="formHorizontalEmail">
+          <Col componentClass={ControlLabel} sm={2}>
+            Email
+          </Col>
+          <Col sm={6}>
+            <FormControl type="email" placeholder="Email" />
+          </Col>
         </FormGroup>
-      </form>
+
+        <FormGroup controlId="formHorizontalPassword">
+          <Col componentClass={ControlLabel} sm={2}>
+            Phone Number
+          </Col>
+          <Col sm={6}>
+          <InputGroup>
+      <InputGroup.Addon>+1</InputGroup.Addon>
+      <FormControl type="text" placeholder="Phone Number" />
+    </InputGroup>
+          </Col>
+        </FormGroup>
+        <FormGroup>
+          <Col smOffset={2} sm={10}>
+            <Button type="submit" bsStyle="primary">Sign in</Button>
+          </Col>
+        </FormGroup>
+      </Form>
     );
   }
 }
