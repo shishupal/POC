@@ -8,7 +8,11 @@ class CardForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
 
     this.state = {
-      value: ''
+      firstName: '',
+      lastName:'',
+      email:'',
+      ssn:'',
+      phoneNumber:''
     };
   }
 
@@ -21,53 +25,85 @@ class CardForm extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({ value: e.target.value });
+    const state = this.state
+         state[e.target.name] = e.target.value;
+         this.setState(state);
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state);
+    
+    event.preventDefault();
   }
 
   render() {
     return (
-      <Form horizontal>
-      <FormGroup controlId="formHorizontalFirstName">
+      <Form horizontal onSubmit={this.handleSubmit}>
+      <FormGroup controlId="firstName">
         <Col componentClass={ControlLabel} sm={2}>
         First Name
         </Col>
         <Col sm={6}>
-          <FormControl type="text" placeholder=" First Name" />
+          <FormControl
+          type="text"
+          name='firstName'
+          placeholder=" First Name"
+          value={this.state.firstName}
+          onChange={this.handleChange} />
         </Col>
       </FormGroup>
-      <FormGroup controlId="formHorizontalLastName">
+      <FormGroup controlId="lastName">
         <Col componentClass={ControlLabel} sm={2}>
           Last Name
         </Col>
         <Col sm={6}>
-          <FormControl type="text" placeholder="Last Name" />
+          <FormControl
+          type="text"
+          name='lastName'
+          placeholder="Last Name"
+          value={this.state.lastName}
+        onChange={this.handleChange} />
         </Col>
       </FormGroup>
-      <FormGroup controlId="formHorizontalLastName">
+      <FormGroup controlId="ssn">
         <Col componentClass={ControlLabel} sm={2}>
           SSN
         </Col>
         <Col sm={6}>
-          <FormControl type="text" placeholder="Social security Number" />
+          <FormControl type="text"
+          name='ssn'
+          placeholder="Social security Number"
+          value={this.state.ssn}
+          onChange={this.handleChange}
+          />
         </Col>
       </FormGroup>
-        <FormGroup controlId="formHorizontalEmail">
+        <FormGroup controlId="email">
           <Col componentClass={ControlLabel} sm={2}>
             Email
           </Col>
           <Col sm={6}>
-            <FormControl type="email" placeholder="Email" />
+            <FormControl type="email"
+              name='email'
+            placeholder="Email"
+            value={this.state.email}
+              onChange={this.handleChange}
+              />
           </Col>
         </FormGroup>
 
-        <FormGroup controlId="formHorizontalPassword">
+        <FormGroup controlId="phoneNumber">
           <Col componentClass={ControlLabel} sm={2}>
             Phone Number
           </Col>
           <Col sm={6}>
           <InputGroup>
       <InputGroup.Addon>+1</InputGroup.Addon>
-      <FormControl type="text" placeholder="Phone Number" />
+      <FormControl type="text" placeholder="Phone Number"
+        name="phoneNumber"
+      value={this.state.phoneNumber}
+        onChange={this.handleChange}
+        />
     </InputGroup>
           </Col>
         </FormGroup>
