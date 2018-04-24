@@ -1,7 +1,6 @@
 //import {Carousel} from 'react-bootstrap';
 import React from 'react'
 import '../styles/cardContainer.css';
-import axios from 'axios'
 import CardList from './cardDetails';
 let black = require('../images/black.png');
 let blue = require('../images/blue.png');
@@ -27,7 +26,7 @@ class CardContainer extends React.Component {
   componentDidMount() {
     fetch('http://localhost:3000/db')
       .then(response => response.json())
-      .then(json => {console.log(json)
+      .then(json => {
         this.setState(json);
       });
   }
@@ -45,7 +44,6 @@ class CardContainer extends React.Component {
         <div className="row">
             <CardList List={this.state.cardList[0].cardDetails} eliteCardImage={black} />
         </div>
-
         <div className="row">
             <CardList List={this.state.cardList[0].cardDetails} eliteCardImage={blue} />
         </div>

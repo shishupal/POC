@@ -51,3 +51,10 @@ color:  #fff;
  #app .modal-body{
    margin-left: 12%;
  }
+
+ #app .jumbotron h1{
+   margin-left: 10%;
+ }
+ #app .jumbotron p{
+   margin-left: 10%;
+ }

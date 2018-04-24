@@ -17,7 +17,6 @@ class MyLargeModal extends React.Component {
           <Modal.Title id="contained-modal-title-lg">Please enter Your Details.</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4> formsss</h4>
           <CardForm />
         </Modal.Body>
         <Modal.Footer>
