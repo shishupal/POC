@@ -52,7 +52,7 @@ color:  #fff;
    margin-left: 12%;
  }
 
- #app .jumbotron h1{
+ #app  .modal-body .jumbotron h1{
    margin-left: 10%;
  }
  #app .jumbotron p{

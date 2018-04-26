@@ -3,9 +3,10 @@
  */
 import React from 'react';
 import {Jumbotron} from 'react-bootstrap';
-const Sucesss = (props) =>{
+const Sucesss = () =>{
   return(
-  <div><Jumbotron>
+  <div>
+  <Jumbotron>
   <h1> congratulations !!!</h1>
   <p>
      Thanks you for your Interest in US BANK, Your card has been Appoved .
