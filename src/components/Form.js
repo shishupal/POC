@@ -43,7 +43,7 @@ return '';
 };
 bollcheckphoneNumber =(error)=>{
 
-  if(error >= 1 && error <=10 ){
+  if(error >= 1 && error <=9 ){
     return <div  className="bold text-danger" > Please enter Valid Phone number.</div>;
   }
 return '';
@@ -74,7 +74,7 @@ return '';
   getValidationStatePhone(value) {
     const length = value.length;
      if (length == 10) return 'success';
-    else if (length > 0 && length <= 7) return 'error';
+    else if (length > 0 && length <= 9) return 'error';
     return null;
   }
 
@@ -109,8 +109,9 @@ event.preventDefault();
   }
     //const formData = new FormData(event.target)
   console.log(data);
-    axios.post('http://localhost:3000/db',data).then(data=>{
-      alert("hello")
+    axios.post('http://localhost:8080/apply',data).then(data=>{
+    //  alert("hello")
+        this.setState({chkClick:true})
     }).catch(err=>{
       console.log(err);
       this.setState({chkClick:true})

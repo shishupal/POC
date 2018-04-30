@@ -1,5 +1,6 @@
 //import {Carousel} from 'react-bootstrap';
 import React from 'react'
+import {connect} from'react-redux';
 import '../styles/cardContainer.css';
 import CardList from './cardDetails';
 let black = require('../images/black.png');
@@ -11,29 +12,17 @@ class CardContainer extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state={
-      'cardList': [{
-      'cardDetails':[]
-      }]}
+      'cardList': []
+    }
   }
-
-  handleSelect(selectedIndex) {
-    this.setState({
-      index: selectedIndex,
-      direction: 'next'
-    });
-  }
-
   componentDidMount() {
-    fetch('http://localhost:3000/db')
-      .then(response => response.json())
-      .then(json => {
-        this.setState(json);
-      });
-  }
+      setTimeout(()=>{
+          this.setState(this.props.cards[0]);},0)
+    }
 
   render() {
     {
-      if (this.state.cardList[0].cardDetails.length ==0) {
+      if (this.state.cardList.length ==0) {
           return <div>Loading...</div>;
       }
   return (
@@ -60,4 +49,7 @@ class CardContainer extends React.Component {
   }
 }
 
-export default CardContainer;
+function mapSateToProps(state) {
+  return {cards:state.cards};
+}
+export default connect(mapSateToProps)(CardContainer);

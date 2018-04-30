@@ -5,13 +5,12 @@ import React from 'react';
 import CardListItem from './cardDetailsList';
 
 const CardList = (props) =>{
-  let count=0;
   let image=props.eliteCardImage;
-  const cardListItem = props.List.map((list)=>{
+  const cardListItem = props.List.map((list,i)=>{
     return(
       <CardListItem
         card={list}
-        key={count}
+        key={i}
         img={image}
       />);
   });
