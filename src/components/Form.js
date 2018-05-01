@@ -1,14 +1,15 @@
 import {FormGroup, FormControl,ControlLabel ,Form,Col,Button,InputGroup} from 'react-bootstrap';
 import React from 'react';
-//import post from './post';
-import axios from 'axios';
 import Sucesss from './success';
+import {bindActionCreators} from 'redux';
+import {postInfo} from '../actions/index';
+import {connect} from'react-redux';
 
 
 class CardForm extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-
+  constructor(props) {
+    super(props);
+    //this.props.postInfo({"firstName":"","lastName":"","email":"shishupal096@gmail.com","ssn":"12345657888","phoneNumber":"4800000000000"});
     this.handleChange = this.handleChange.bind(this);
 
     this.state = {
@@ -88,7 +89,7 @@ return '';
     const state = this.state
          state[e.target.name] = e.target.value;
          this.setState(state);
-         console.log('A name was submitted: ' + this.state);
+        // console.log('A name was submitted: ' + this.state);
   }
 
 
@@ -101,21 +102,20 @@ return '';
   //console.log(event);
 event.preventDefault();
   const data={
-    firstName: document.getElementsByName("firstName")[0].value ||'',
-    lastName:document.getElementsByName("lastName")[0].value ||'',
-    email:document.getElementsByName("email")[0].value ||'',
-    ssn:document.getElementsByName("ssn")[0].value || '',
-    phoneNumber:document.getElementsByName("phoneNumber")[0].value ||''
+    firstName: document.getElementsByName('firstName')[0].value ||'',
+    lastName:document.getElementsByName('lastName')[0].value ||'',
+    email:document.getElementsByName('email')[0].value ||'',
+    ssn:document.getElementsByName('ssn')[0].value || '',
+    phoneNumber:document.getElementsByName('phoneNumber')[0].value ||''
   }
+
+  this.props.postInfo(data).then(info =>{
+    //console.log()
+    this.setState({chkClick:true})
+  });
+
     //const formData = new FormData(event.target)
-  console.log(data);
-    axios.post('http://localhost:8080/apply',data).then(data=>{
-    //  alert("hello")
-        this.setState({chkClick:true})
-    }).catch(err=>{
-      console.log(err);
-      this.setState({chkClick:true})
-    })
+//  console.log(data);
 
   }
 
@@ -226,4 +226,14 @@ event.preventDefault();
 
   }
 }
-export default CardForm;
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({postInfo},dispatch);
+}
+function mapSateToProps(state) {
+  return {Info:state.Info};
+}
+
+export default connect(mapSateToProps,mapDispatchToProps)(CardForm);
+
+//export default CardForm;

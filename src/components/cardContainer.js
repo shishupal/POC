@@ -14,16 +14,21 @@ class CardContainer extends React.Component {
     this.state={
       'cardList': []
     }
+    console.log(this.prop);
   }
   componentDidMount() {
+
       setTimeout(()=>{
-          this.setState(this.props.cards[0]);},0)
+          this.setState(this.props.cards[0]);},1000)
     }
 
   render() {
     {
+      if(!this.props.cards){
+          return <div>Loading......</div>;
+      }
       if (this.state.cardList.length ==0) {
-          return <div>Loading...</div>;
+          return <div>Loading... </div>;
       }
   return (
       <div className="cardContainer container">
@@ -50,6 +55,6 @@ class CardContainer extends React.Component {
 }
 
 function mapSateToProps(state) {
-  return {cards:state.cards};
+  return {cards:state.cards ||[]};
 }
 export default connect(mapSateToProps)(CardContainer);
