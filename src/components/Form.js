@@ -1,24 +1,26 @@
 import {FormGroup, FormControl,ControlLabel ,Form,Col,Button,InputGroup} from 'react-bootstrap';
 import React from 'react';
 import Sucesss from './success';
+import ReviewDetails from './review';
 import {bindActionCreators} from 'redux';
 import {postInfo} from '../actions/index';
 import {connect} from'react-redux';
 
 
 class CardForm extends React.Component {
+   //isreview=false;
   constructor(props) {
     super(props);
-    //this.props.postInfo({"firstName":"","lastName":"","email":"shishupal096@gmail.com","ssn":"12345657888","phoneNumber":"4800000000000"});
     this.handleChange = this.handleChange.bind(this);
-
+    this.handleReveiw = this.handleReveiw.bind(this);
     this.state = {
       firstName: '',
       lastName:'',
       email:'',
       ssn:'',
       phoneNumber:'',
-      chkClick :false
+      chkClick :false,
+      reviewClick:false
     };
   }
  bollcheck =(error)=>{
@@ -99,32 +101,25 @@ return '';
 
 
   handleSubmit(event) {
-  //console.log(event);
 event.preventDefault();
-  const data={
-    firstName: document.getElementsByName('firstName')[0].value ||'',
-    lastName:document.getElementsByName('lastName')[0].value ||'',
-    email:document.getElementsByName('email')[0].value ||'',
-    ssn:document.getElementsByName('ssn')[0].value || '',
-    phoneNumber:document.getElementsByName('phoneNumber')[0].value ||''
-  }
-
-  this.props.postInfo(data).then(info =>{
-    //console.log()
+  this.props.postInfo(this.state).then(info =>{
     this.setState({chkClick:true})
   });
-
-    //const formData = new FormData(event.target)
-//  console.log(data);
-
+}
+  handleReveiw(event) {
+    //this.isreview=true;
+      this.setState({reviewClick:true})
+      console.log(this.state)
+      event.preventDefault();
   }
 
   render() {
-
-      if(!this.state.chkClick){
+      if(!this.state.chkClick && !this.state.reviewClick){
         return (
+          <div>
             <Form horizontal
             name="info"
+            onChange={this.handleChange}
              onSubmit={this.handleSubmit}>
             <FormGroup controlId="firstName"
             validationState={this.getValidationState(this.state.firstName)}>
@@ -214,14 +209,25 @@ event.preventDefault();
                 <Col sm={4}>{this.bollcheckphoneNumber(this.state.phoneNumber.length)}</Col>
               </FormGroup>
               <FormGroup>
-                <Col smOffset={2} sm={10}>
-                  <Button type="submit" bsStyle="primary">Sign in</Button>
+                <Col smOffset={2} sm={4}>
+                  <Button type="submit" bsStyle="primary">Submit</Button>
+                </Col>
+                <Col smOffset={1} sm={4}>
+                  <Button type="button" bsStyle="primary" onClick={this.handleReveiw}>  ReviewDetails  </Button>
                 </Col>
               </FormGroup>
             </Form>
+
+
+            </div>
         );
-      }else{
-        return <Sucesss/>
+      }else {
+        if(this.state.reviewClick){
+          return <ReviewDetails data={this.state}/>
+        }
+         if(this.state.chkClick){
+          return <Sucesss />
+        }
       }
 
   }
