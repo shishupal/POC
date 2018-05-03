@@ -7,7 +7,20 @@ A sample POC on card acqusition
 # Make sure you have node => 6.8
 npm install -g yo
 npm install -g generator-react-webpack
+If you are behind the proxy 
+npm config set registry https://registry.npmjs.org/
+npm config set proxy http://<username>:<password>@<proxy-server-url>:<port>
+npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port>
 ```
+
+## Important Links
+* > [ReactJS](http://facebook.github.io/react/) - A JavaScript library for building user interface
+*  >[Redux](https://github.com/reactjs/redux/tree/master/docs) - A predictable state container for JavaScript apps
+*  >[React-redux](https://github.com/reactjs/react-redux )  A library  that integrates reat with redux.
+*  >[react-router ](https://github.com/reacttraining/react-router) A routing  library for React-Router 
+*  >[React-Intl]https://github.com/yahoo/react-intl) Internationalization for react component.
+*  >[Jest](https://facebook.github.io/jest/docs/en/api.html/)  Testing librarary.
+
 
 ## Setting up projects
 ```bash
