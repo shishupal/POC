@@ -14,7 +14,7 @@ class CardContainer extends React.Component {
     this.state={
       'cardList': []
     }
-    console.log(this.prop);
+    //console.log(this.prop);
   }
   componentDidMount() {
 

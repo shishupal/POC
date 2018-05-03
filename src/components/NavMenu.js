@@ -3,9 +3,6 @@ import React from 'react';
 class NavMenu extends React.Component {
   constructor(props, context) {
     super(props, context);
-
-    //  this.state = { index: 0, direction: null };
-
   }
   render(){
   return (

@@ -22,7 +22,11 @@ class CardForm extends React.Component {
       chkClick :false,
       reviewClick:false
     };
+
+
   }
+
+
  bollcheck =(error)=>{
 
    if(error >= 1 && error <= 4 ){
@@ -91,25 +95,26 @@ return '';
     const state = this.state
          state[e.target.name] = e.target.value;
          this.setState(state);
-        // console.log('A name was submitted: ' + this.state);
   }
 
 
   componentDidMount() {
-  this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit= this.handleSubmit.bind(this);
+if(this.props['data']!=undefined){
+  this.setState(this.props['data']);
+}
   }
 
 
   handleSubmit(event) {
 event.preventDefault();
   this.props.postInfo(this.state).then(info =>{
-    this.setState({chkClick:true})
-  });
+    this.setState({chkClick:true,reviewClick:false});
+  })
 }
   handleReveiw(event) {
     //this.isreview=true;
       this.setState({reviewClick:true})
-      console.log(this.state)
       event.preventDefault();
   }
 
