@@ -19,7 +19,7 @@ npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port
 *  >[React-redux](https://github.com/reactjs/react-redux )  A library  that integrates reat with redux.
 *  >[react-router ](https://github.com/reacttraining/react-router) A routing  library for React-Router 
 *  >[React-Intl](https://github.com/yahoo/react-intl) Internationalization for react component.
-*  >[Jest](https://facebook.github.io/jest/docs/en/api.html/)  Testing librarary.
+*  >[Jest](https://facebook.github.io/jest/docs/en/api.html/)  Testing library.
 
 
 ## Setting up projects
