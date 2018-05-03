@@ -18,7 +18,7 @@ npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port
 *  >[Redux](https://github.com/reactjs/redux/tree/master/docs) - A predictable state container for JavaScript apps
 *  >[React-redux](https://github.com/reactjs/react-redux )  A library  that integrates reat with redux.
 *  >[react-router ](https://github.com/reacttraining/react-router) A routing  library for React-Router 
-*  >[React-Intl]https://github.com/yahoo/react-intl) Internationalization for react component.
+*  >[React-Intl](https://github.com/yahoo/react-intl) Internationalization for react component.
 *  >[Jest](https://facebook.github.io/jest/docs/en/api.html/)  Testing librarary.
 
 
