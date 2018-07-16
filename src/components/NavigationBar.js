@@ -4,7 +4,7 @@ let Navbar = require('react-bootstrap/lib/Navbar');
 let NavItem = require('react-bootstrap/lib/NavItem');
 let Nav = require ('react-bootstrap/lib/Nav');
 import {Button ,FormGroup,FormControl} from 'react-bootstrap';
-let yeomanImage = require('../images/usbank_logo.png');
+let yeomanImage = require('../images/bank_logo.png');
 
 class NavigationBar extends React.Component {
   render() {
